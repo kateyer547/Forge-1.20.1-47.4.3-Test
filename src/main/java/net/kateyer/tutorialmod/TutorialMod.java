@@ -1,6 +1,7 @@
 package net.kateyer.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.kateyer.tutorialmod.block.ModBlocks;
 import net.kateyer.tutorialmod.item.ModCreativeModsTabs;
 import net.kateyer.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,7 @@ public class TutorialMod {
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
 
         ModCreativeModsTabs.register(modEventBus);
 

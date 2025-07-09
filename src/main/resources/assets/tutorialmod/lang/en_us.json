@@ -1,5 +1,14 @@
 {
   "item.tutorialmod.auralite": "Auralite",
   "item.tutorialmod.dragonite": "Dragonite",
+
+  "block.tutorialmod.auralite_block": "Auralite Block",
+  "block.tutorialmod.dragonite_block": "Dragonite Block",
+
+
   "creativetab.modded_tab" : "Modded Item Tab"
+
+
+
+
 }

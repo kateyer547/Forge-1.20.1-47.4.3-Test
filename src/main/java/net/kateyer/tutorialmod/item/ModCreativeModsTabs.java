@@ -1,6 +1,7 @@
 package net.kateyer.tutorialmod.item;
 
 import net.kateyer.tutorialmod.TutorialMod;
+import net.kateyer.tutorialmod.block.ModBlocks;
 import net.minecraft.client.gui.components.toasts.TutorialToast;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -14,12 +15,16 @@ public class ModCreativeModsTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> MODDED_TAB = CREATIVE_MODE_TABS.register("modded_tab",
-            () -> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.DRAGONITE.get()))
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.AURALITE.get()))
                     .title(Component.translatable("creativetab.modded_tab"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.AURALITE.get());
-                        output.accept(ModItems.DRAGONITE.get());
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.AURALITE.get());
+                        pOutput.accept(ModItems.DRAGONITE.get());
+
+                        pOutput.accept(ModBlocks.AURALITE_BLOCK.get());
+                        pOutput.accept(ModBlocks.DRAGONITE_BLOCK.get());
+
                     })
                     .build());
 
